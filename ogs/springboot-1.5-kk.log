@@ -1,0 +1,159 @@
+2018-10-23 22:33:21,714  INFO Application:48 - Starting Application on LAPTOP-HITKVSFS with PID 672 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 22:33:21,717 DEBUG Application:51 - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 22:33:21,718  INFO Application:597 - The following profiles are active: dev
+2018-10-23 22:33:34,545  INFO Application:57 - Started Application in 13.822 seconds (JVM running for 17.004)
+2018-10-23 22:36:11,898  INFO Application:48 - Starting Application on LAPTOP-HITKVSFS with PID 4992 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 22:36:11,914 DEBUG Application:51 - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 22:36:11,914  INFO Application:597 - The following profiles are active: dev
+2018-10-23 22:36:22,575  INFO Application:57 - Started Application in 11.691 seconds (JVM running for 13.759)
+2018-10-23 22:40:56,743  INFO Application:48 - Starting Application on LAPTOP-HITKVSFS with PID 11268 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 22:40:56,750 DEBUG Application:51 - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 22:40:56,750  INFO Application:597 - The following profiles are active: dev
+2018-10-23 22:41:06,019  INFO Application:57 - Started Application in 10.183 seconds (JVM running for 12.241)
+2018-10-23 22:41:06,019  INFO Application:13 - c测试实施
+2018-10-23 22:46:50.482 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 12088 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 22:46:50.497 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 22:46:50.497 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 22:47:02.059 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 13.138 seconds (JVM running for 15.941)
+2018-10-23 22:47:02.060 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:11:12.648 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 13564 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:11:12.651 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:11:12.651 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:11:28.003 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 17.019 seconds (JVM running for 19.997)
+2018-10-23 23:11:28.003 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:12:28.378 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: SELECT id , `name` FROM t_test 
+2018-10-23 23:12:28.633 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 
+2018-10-23 23:12:28.688 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 0
+2018-10-23 23:12:28.692 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：null
+2018-10-23 23:14:34.655 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 11032 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:14:34.671 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:14:34.671 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:14:53.332 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 19.914 seconds (JVM running for 22.804)
+2018-10-23 23:14:53.332 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:15:27.413 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: SELECT id , `name` FROM t_test 
+2018-10-23 23:15:27.631 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 
+2018-10-23 23:15:27.690 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-10-23 23:15:27.694 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:19:01.790 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: SELECT id , `name` FROM t_test 
+2018-10-23 23:19:03.007 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 
+2018-10-23 23:19:03.123 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-10-23 23:22:39.872 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 15900 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:22:39.874 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:22:39.874 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:22:51.400 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 12.815 seconds (JVM running for 16.059)
+2018-10-23 23:22:51.400 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:23:02.990 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: SELECT id , `name` FROM t_test 
+2018-10-23 23:23:03.316 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 
+2018-10-23 23:23:03.381 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-10-23 23:23:03.385 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:25:50.961 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 4624 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:25:50.967 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:25:50.967 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:26:00.930 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 10.945 seconds (JVM running for 13.146)
+2018-10-23 23:26:00.931 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:27:16.340 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 8236 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:27:16.342 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:27:16.343 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:27:28.521 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 13.452 seconds (JVM running for 16.797)
+2018-10-23 23:27:28.522 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:27:36.099 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:28:21.370 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 12212 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:28:21.373 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:28:21.375 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:28:31.989 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 11.556 seconds (JVM running for 13.791)
+2018-10-23 23:28:31.989 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:28:42.565 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:31:50.259 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 9332 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:31:50.886 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:31:50.886 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:32:06.684 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 18.741 seconds (JVM running for 22.502)
+2018-10-23 23:32:06.684 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:33:35.057 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 16556 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:33:35.059 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:33:35.059 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:33:49.575 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 15.846 seconds (JVM running for 19.013)
+2018-10-23 23:33:49.576 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:33:54.640 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:33:59.930 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:35:31.418 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 4396 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:35:31.419 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:35:31.419 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:35:46.815 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 17.357 seconds (JVM running for 20.632)
+2018-10-23 23:35:46.815 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:36:00.873 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:36:38.012 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 15392 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:36:38.013 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:36:38.013 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:36:57.647 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 20.914 seconds (JVM running for 23.283)
+2018-10-23 23:36:57.648 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:37:23.038 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 1548 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:37:23.043 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:37:23.044 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:37:34.422 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 12.52 seconds (JVM running for 15.247)
+2018-10-23 23:37:34.422 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:37:38.367 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:39:08.267 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 5864 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:39:08.269 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:39:08.270 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:39:19.974 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 12.89 seconds (JVM running for 15.449)
+2018-10-23 23:39:19.975 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:39:30.467 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:41:46.696 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 672 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:41:46.703 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:41:46.704 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:42:01.718 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 16.455 seconds (JVM running for 19.545)
+2018-10-23 23:42:01.718 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:42:09.197 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:44:40.945 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 7776 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:44:40.945 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:44:40.945 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:44:54.618 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 15.169 seconds (JVM running for 18.443)
+2018-10-23 23:44:54.618 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:45:00.520 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 10688 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:45:00.523 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:45:00.524 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:45:11.294 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 11.981 seconds (JVM running for 14.446)
+2018-10-23 23:45:11.294 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:45:14.920 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:45:37.951 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 2712 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:45:37.951 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:45:37.951 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:45:49.940 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 12.932 seconds (JVM running for 15.413)
+2018-10-23 23:45:49.940 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:46:32.651 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:48:54.939 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 17124 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:48:54.941 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:48:54.941 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:49:01.222 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 6.828 seconds (JVM running for 7.909)
+2018-10-23 23:49:01.222 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:49:07.332 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:52:53.859 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 904 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:52:53.861 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:52:53.861 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:52:59.333 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 5.989 seconds (JVM running for 7.59)
+2018-10-23 23:52:59.333 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:53:04.943 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:56:21.309 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 16212 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:56:21.312 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:56:21.312 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:56:27.773 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 7.125 seconds (JVM running for 8.427)
+2018-10-23 23:56:27.774 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:56:32.618 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-23 23:58:00.936 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 17000 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-23 23:58:00.939 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-23 23:58:00.939 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-23 23:58:07.103 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 7.223 seconds (JVM running for 8.647)
+2018-10-23 23:58:07.104 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-23 23:58:12.744 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: SELECT id , `name` FROM t_test 
+2018-10-23 23:58:12.852 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 
+2018-10-23 23:58:12.878 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-10-23 23:58:12.880 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)
+2018-10-24 00:02:48.592 INFO  org.springframework.boot.StartupInfoLogger 48 logStarting - Starting Application on LAPTOP-HITKVSFS with PID 3896 (D:\daima\springboot-1.5\target\classes started by 13624 in D:\daima\springboot-1.5)
+2018-10-24 00:02:48.618 DEBUG org.springframework.boot.StartupInfoLogger 51 logStarting - Running with Spring Boot v1.5.16.RELEASE, Spring v4.3.19.RELEASE
+2018-10-24 00:02:48.619 INFO  org.springframework.boot.SpringApplication 597 logStartupProfileInfo - The following profiles are active: dev
+2018-10-24 00:02:53.379 INFO  org.springframework.boot.StartupInfoLogger 57 logStarted - Started Application in 5.674 seconds (JVM running for 6.799)
+2018-10-24 00:02:53.380 INFO  com.qbk.Application 13 main - c测试实施
+2018-10-24 00:02:58.357 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: SELECT id , `name` FROM t_test 
+2018-10-24 00:02:58.474 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 
+2018-10-24 00:02:58.503 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-10-24 00:02:58.505 INFO  com.qbk.service.impl.TestServiceImpl 25 getTest - 测试：TestInfo(id=1, name=quboka)

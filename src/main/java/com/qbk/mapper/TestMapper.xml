@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qbk.mapper.TestMapper">
+
+    <!--测试-->
+    <select id="getTest" resultType="TestInfo" >
+        SELECT id , `name` FROM t_test
+    </select>
+
+    <insert id="addTest" parameterType="TestInfo" >
+        INSERT INTO t_test (id , `name`)
+        VALUES (#{id},#{name})
+    </insert>
+
+</mapper>

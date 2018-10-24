@@ -1,0 +1,111 @@
+#开发环境
+server:
+  port: 8080
+  compression:
+    enabled: true
+  tomcat:
+    remote-ip-header: X-Forwarded-For
+    protocol-header: X-Forwarded-Proto
+  session:
+    cookie:
+      http-only: true
+
+logging:
+  config: classpath:log4j2.properties
+#  config: classpath:log4j2.xml
+
+spring:
+  application:
+    name: "@project.artifactId@"
+  profiles:
+    active: "@spring.profiles.active@"
+  jackson:
+    serialization:
+      indent-output: true
+      write-dates-as-timestamps: false
+  messages:
+    basename: i18n/messages
+  mvc:
+    date-format: yyyy-MM-dd
+    favicon:
+      enabled: false
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 123456     # 密码（默认为空）
+    timeout: 6000  # 连接超时时长（毫秒）
+    pool:
+      max-active: 1000  # 连接池最大连接数（使用负值表示没有限制）
+      max-wait: -1      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-idle: 10      # 连接池中的最大空闲连接
+      min-idle: 5       # 连接池中的最小空闲连接
+  http:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  mail:
+    host: localhost
+    port: 25
+    username: admin@localhost
+    password:
+  datasource:
+    druid:
+      name: boot1.5
+      url: jdbc:mysql://localhost:3306/boot_test_1.5?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&useOldAliasMetadataBehavior=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      # 下面为连接池的补充设置，应用到上面所有数据源中
+      # 初始化大小，最小，最大
+      initialSize: 1
+      minIdle: 3
+      maxActive: 20
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 30000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      # 打开PSCache，并且指定每个连接上PSCache的大小
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: stat,slf4j
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      # 合并多个DruidDataSource的监控数据
+      useGlobalDataSourceStat: true
+      filter:
+        wall:
+          config:
+            multiStatementAllow: true
+mybatis:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  type-aliases-package: com.qbk.entity
+  configuration:
+    cacheEnabled: true
+    lazyLoadingEnabled: true
+    multipleResultSetsEnabled: false
+    useColumnLabel: true
+    defaultExecutorType: REUSE
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 25000
+    aggressiveLazyLoading: false
+pagehelper:
+  helperDialect: mysql
+  offsetAsPageNum: true
+  reasonable: true
+  rowBoundsWithCount: true
+
+info:
+  build:
+    artifact: "@project.artifactId@"
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    status : 这个用于设置log4j2自身内部的信息输出,可以不设置,当设置成trace时,会看到log4j2内部各种详细输出
+    monitorInterval : Log4j能够自动检测修改配置文件和重新配置本身, 设置间隔秒数。
+-->
+<configuration status="WARN"  monitorInterval="600">
+    <!--全局参数-->
+    <Properties>
+        <Property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n</Property>
+    </Properties>
+    <Loggers>
+
+        <!--只将com.qbk写到文件-->
+        <Logger name="com.qbk" level="${log4j2.level}">
+            <AppenderRef ref="file"></AppenderRef>
+        </Logger>
+        <!-- 第三方日志系统 -->
+        <logger name="org.springframework.core" level="${log4j2.level}"/>
+        <logger name="org.springframework.beans" level="${log4j2.level}"/>
+        <logger name="org.springframework.context" level="${log4j2.level}"/>
+        <logger name="org.springframework.web" level="${log4j2.level}"/>
+        <logger name="org.quartz" level="${log4j2.level}"/>
+        <!-- name中的值为mybatis的DAO层接口包路径 -->
+        <logger name="log4j2.logger.com.qbk.mapper" level="DEBUG" additivity="false" />
+
+        <Root level="DEBUG">
+            <AppenderRef ref="console"></AppenderRef>
+            <AppenderRef ref="rolling_file"></AppenderRef>
+        </Root>
+
+    </Loggers>
+    <Appenders>
+        <!--这个输出控制台的配置-->
+        <Console name="console" target="SYSTEM_OUT" follow="true">
+            <!--控制台只输出level及以上级别的信息-->
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+        </Console>
+        <!-- 同一来源的Appender可以定义多个RollingFile，定义按天存储日志 -->
+        <RollingFile name="rolling_file"
+                     fileName="${log4j2.root.path}.log"
+                     filePattern="${log4j2.root.path}_%d{yyyy-MM-dd}.log">
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <!--<SizeBasedTriggeringPolicy size="1 KB"/>-->
+            </Policies>
+        </RollingFile>
+        <File name="file" fileName="${log4j2.package.path}.log">
+            <!--&lt;!&ndash;控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）&ndash;&gt;-->
+            <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>${pattern}</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+</configuration>
