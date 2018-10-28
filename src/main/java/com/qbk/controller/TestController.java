@@ -54,7 +54,7 @@ public class TestController {
     public BaseResult addTest(TestInfo testInfo){
        int result = testService.addTest(testInfo);
         if (result > 0) {
-            log.error("添加成功");
+            log.info("添加成功");
             return BaseResultGenerator.success("添加成功");
         } else {
             log.error("添加失败");
@@ -67,7 +67,7 @@ public class TestController {
     public BaseResult deleteTest(@ApiParam(name = "id",value = "主键",required = true)@PathVariable Integer id){
         int result = testService.deleteTest(id);
         if (result > 0) {
-            log.error("删除成功");
+            log.info("删除成功");
             return BaseResultGenerator.success("删除成功");
         } else {
             log.error("删除失败");

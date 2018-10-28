@@ -30,6 +30,8 @@
 		<log4j2.fatal.path>logs/${project.name}-fatal</log4j2.fatal.path>
 		<log4j2.package.path>logs/${project.name}-kk</log4j2.package.path>
 		<springfox.version>2.9.2</springfox.version>
+		<commons-lang3.version>3.1</commons-lang3.version>
+		<commons-pool2.version>2.0</commons-pool2.version>
 	</properties>
 
 	<dependencies>
@@ -120,16 +122,27 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${springfox.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.visionvera</groupId>
-			<artifactId>swagger-bootstrap-ui</artifactId>
-			<version>1.8.4</version>
-		</dependency>
 		<!--  fastjson-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>1.2.46</version>
+		</dependency>
+		<!--aop-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<!-- Apache Commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>${commons-pool2.version}</version>
 		</dependency>
 	</dependencies>
 

@@ -1,5 +1,6 @@
 package com.qbk.service.impl;
 
+import com.qbk.annotation.SysLog;
 import com.qbk.entity.TestInfo;
 import com.qbk.mapper.TestMapper;
 import com.qbk.service.TestService;
@@ -21,6 +22,7 @@ public class TestServiceImpl implements TestService{
     @Autowired
     private TestMapper testMapper ;
 
+    @SysLog("获取测试列表")
     @Override
     public List<TestInfo> getTest() {
         List<TestInfo> list = testMapper.getTest();
@@ -29,11 +31,13 @@ public class TestServiceImpl implements TestService{
         return list;
     }
 
+    @SysLog("添加测试")
     @Override
     public int addTest(TestInfo testInfo) {
         return testMapper.addTest(testInfo);
     }
 
+    @SysLog("删除测试")
     @Override
     public int deleteTest(Integer id) {
         return testMapper.deleteTest(id);
