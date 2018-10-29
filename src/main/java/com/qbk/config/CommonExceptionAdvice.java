@@ -37,9 +37,9 @@ public class CommonExceptionAdvice {
     /**
      * 400 - Bad Request
      */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(MissingServletRequestParameterException.class)
-    public BaseResult<String> handleMissingServletRequestParameterException(MissingServletRequestParameterException e) {
+    public BaseResult<String> handleMissingServletRequestParServiceExceptionameterException(MissingServletRequestParameterException e) {
         log.error("缺少请求参数", e);
         return BaseResultGenerator.error("缺少请求参数");
     }
@@ -47,7 +47,7 @@ public class CommonExceptionAdvice {
     /**
      * 400 - Bad Request
      */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public BaseResult<String> handleHttpMessageNotReadableException(HttpMessageNotReadableException e) {
         log.error("参数解析失败", e);
@@ -58,7 +58,7 @@ public class CommonExceptionAdvice {
     /**
      * 400 - Bad Request
      */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public BaseResult handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
         log.error("参数验证失败", e);
@@ -72,7 +72,7 @@ public class CommonExceptionAdvice {
     /**
      * 400 - Bad Request
      */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(BindException.class)
     public BaseResult handleBindException(BindException e) {
         log.error("参数绑定失败", e);
@@ -88,7 +88,7 @@ public class CommonExceptionAdvice {
     /**
      * 400 - Bad Request
      */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(ConstraintViolationException.class)
     public BaseResult handleServiceException(ConstraintViolationException e) {
         log.error("参数验证失败", e);
@@ -101,7 +101,7 @@ public class CommonExceptionAdvice {
     /**
      * 400 - Bad Request
      */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(ValidationException.class)
     public BaseResult handleValidationException(ValidationException e) {
         log.error("参数验证失败", e);
@@ -111,7 +111,7 @@ public class CommonExceptionAdvice {
     /**
      * 404 - Not Found
      */
-    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(NoHandlerFoundException.class)
     public BaseResult noHandlerFoundException(NoHandlerFoundException e) {
         log.error("Not Found", e);
@@ -122,7 +122,7 @@ public class CommonExceptionAdvice {
     /**
      * 405 - Method Not Allowed
      */
-    @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public BaseResult handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException e) {
         log.error("不支持当前请求方法", e);
@@ -132,7 +132,7 @@ public class CommonExceptionAdvice {
     /**
      * 415 - Unsupported Media Type
      */
-    @ResponseStatus(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
     public BaseResult handleHttpMediaTypeNotSupportedException(HttpMediaTypeNotSupportedException e) {
         log.error("不支持当前媒体类型", e);
@@ -142,11 +142,11 @@ public class CommonExceptionAdvice {
     /**
      * 业务层需要自己声明异常的情况
      */
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(ServiceException.class)
     public BaseResult handleServiceException(ServiceException e) {
         log.error("业务逻辑异常", e);
-        return BaseResultGenerator.error("业务逻辑异常");
+        return BaseResultGenerator.error(e.getMessage());
     }
 
 
@@ -157,6 +157,7 @@ public class CommonExceptionAdvice {
      * @return
      * @throws Exception
      */
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(value = Exception.class)
     public BaseResult defaultErrorHandler(Exception e) {
         log.error("Exception", e);
