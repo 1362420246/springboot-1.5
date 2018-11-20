@@ -30,7 +30,7 @@
 		<log4j2.fatal.path>logs/${project.name}-fatal</log4j2.fatal.path>
 		<log4j2.package.path>logs/${project.name}-kk</log4j2.package.path>
 		<springfox.version>2.9.2</springfox.version>
-		<commons-lang3.version>3.1</commons-lang3.version>
+		<commons-lang3.version>3.4</commons-lang3.version>
 		<commons-pool2.version>2.0</commons-pool2.version>
 		<mapstruct.version>1.2.0.Final</mapstruct.version>
 	</properties>
@@ -181,6 +181,40 @@
 			<artifactId>quartz-jobs</artifactId>
 			<version>2.3.0</version>
 		</dependency>
+
+		<!-- elasticsearch -->
+		<!-- spring-data-elasticsearch 目前支持elasticsearch-5.5.0以下
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-elasticsearch</artifactId>
+		</dependency>
+		-->
+		<!-- elasticsearch 6.2.4-->
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+			<version>6.2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>transport</artifactId>
+			<version>6.2.4</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.elasticsearch</groupId>
+					<artifactId>elasticsearch</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- elasticsearch -->
 
 	</dependencies>
 

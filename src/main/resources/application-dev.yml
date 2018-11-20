@@ -15,6 +15,14 @@ logging:
 #  config: classpath:log4j2.xml
 
 spring:
+  # spring-data-elasticsearch
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch  #节点名字，默认elasticsearch
+      # 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
+      cluster-nodes: 192.168.91.128:9300  #节点地址，多个节点用逗号隔开
+      repositories:
+        enable: true
   application:
     name: "@project.artifactId@"
   profiles:
@@ -109,3 +117,15 @@ info:
     name: "@project.name@"
     description: "@project.description@"
     version: "@project.version@"
+
+# Elasticsearch
+# 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
+elasticsearch:
+  ip: 192.168.91.128
+  port: 9300
+  pool: 5
+  cluster:
+    name: elasticsearch
+
+
+
