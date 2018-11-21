@@ -5,11 +5,13 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
+import org.springframework.kafka.annotation.EnableKafka;
 
 import java.net.InetAddress;
 
 @Log4j2
 @SpringBootApplication
+@EnableKafka
 public class Application {
 
 	public static void main(String[] args) {
