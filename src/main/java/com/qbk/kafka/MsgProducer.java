@@ -19,8 +19,8 @@ public class MsgProducer {
     private KafkaTemplate<String,String> kafkaTemplate;
 
     public void send() {
-        kafkaTemplate.send("quboka","qbk-ceshi2-5");
-        kafkaTemplate.send("kafka_log","qbk-ceshi1-5");
+        kafkaTemplate.send("quboka","qbk-ceshi2-1");
+        kafkaTemplate.send("kafka_log","qbk-ceshi1-1");
 
 //        kafkaTemplate.metrics();
 //

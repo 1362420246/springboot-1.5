@@ -1,0 +1,41 @@
+Configuration:
+  status: error
+
+  Appenders:
+    Console:  #输出到控制台
+      name: CONSOLE
+      target: SYSTEM_OUT
+      ThresholdFilter:
+        level: debug
+        onMatch: ACCEPT
+        onMismatch: DENY
+      PatternLayout:
+        pattern: "%d{yyyy-MM-dd HH:mm:ss,SSS}:%4p %t (%F:%L) - %m%n"
+    Kafka: #输出到Kafka
+      name: KAFKA
+      topic:  kafka_log
+      ThresholdFilter:
+        level: debug
+        onMatch: ACCEPT
+        onMismatch: DENY
+      PatternLayout:
+        pattern: "%d{yyyy-MM-dd HH:mm:ss,SSS}:%4p %t (%F:%L) - %m%n"
+      Property:
+          name: bootstrap.servers
+          value: 192.168.91.129:9092
+
+  Loggers:
+    Root:
+      level: debug
+      AppenderRef:
+        - ref: CONSOLE
+        - ref: KAFKA
+    Logger:
+        additivity: false
+        level: debug
+        AppenderRef:
+          - ref: CONSOLE
+          - ref: KAFKA
+        name: org.apache.kafka #听说这样可以避免递归调用
+        level: debug
+

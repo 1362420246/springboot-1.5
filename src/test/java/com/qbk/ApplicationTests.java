@@ -37,7 +37,17 @@ public class ApplicationTests {
 
 	@Test
 	public void kafkaTest(){
-		msgProducer.send();
+		//msgProducer.send();
+
+		for (int i = 10; i < 20; i++) {
+			log.info("Hello---" + i);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
 
 

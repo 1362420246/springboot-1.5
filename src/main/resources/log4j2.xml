@@ -28,6 +28,12 @@
             <AppenderRef ref="rolling_file"></AppenderRef>
         </Root>
 
+        <!-- kafka -->
+        <Root level="DEBUG">
+            <AppenderRef ref="Kafka"/>
+        </Root>
+        <Logger name="org.apache.kafka" level="debug" />
+
     </Loggers>
     <Appenders>
         <!--这个输出控制台的配置-->
@@ -58,5 +64,15 @@
                 <Pattern>${pattern}</Pattern>
             </PatternLayout>
         </File>
+
+        <!-- kafka -->
+        <Kafka name="Kafka" topic="kafka_log">
+            <PatternLayout pattern="%date %message"/>
+            <Property name="bootstrap.servers">192.168.91.129:9092</Property>
+        </Kafka>
+
     </Appenders>
+
+
+
 </configuration>
