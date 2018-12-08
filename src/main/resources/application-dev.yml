@@ -141,7 +141,10 @@ elasticsearch:
     name: elasticsearch
 
 
-
+security:
+  basic:
+    #security开关
+    enabled: true
 
 
 

@@ -19,6 +19,10 @@
 	</parent>
 
 	<properties>
+		<!-- maven方式跳过maven test, 等同$ mvn package -Dmaven.test.skip=true -->
+		<!-- <maven.test.skip>true</maven.test.skip> -->
+		<!-- surefire plugin方式跳过maven test， 等同$ mvn package -DskipTests -->
+		<skipTests>true</skipTests>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
@@ -222,7 +226,20 @@
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
 
-
+		<!--security-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+		</dependency>
 
 	</dependencies>
 
@@ -240,9 +257,28 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
-					<include>**.*</include>
+					<include>**.properties</include>
+					<include>**.xml</include>
+					<include>**.tld</include>
+					<include>**.txt</include>
+					<include>**.yml</include>
 				</includes>
 				<filtering>true</filtering>
+			</resource>
+			<!--配置中一共有两个resource
+			第一个resource配置是过滤src/main/resources目录下文件**.xml，若文件中有类似${key}这样的配置，就会根据maven的配置进行覆盖，让其使用真实值来填写，
+			第二个resource配置是不过滤src/main/resources目录下除了**.xml的其他文件，也就不会用真实值来填写${key}这样的配置。其他文件可以加载出来
+			若是<include>和<exclude>都存在的话，那就发生冲突了，这时会以<exclude>为准。-->
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>**.properties</exclude>
+					<exclude>**.xml</exclude>
+					<exclude>**.tld</exclude>
+					<exclude>**.txt</exclude>
+					<exclude>**.yml</exclude>
+				</excludes>
 			</resource>
 		</resources>
 		<plugins>
