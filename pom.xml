@@ -137,6 +137,12 @@
 			<version>${springfox.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>swagger-bootstrap-ui</artifactId>
+			<version>1.8.4</version>
+		</dependency>
+
 		<!--  fastjson-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -240,6 +246,11 @@
 			<groupId>org.springframework.security.oauth</groupId>
 			<artifactId>spring-security-oauth2</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+		</dependency>
+
 
 	</dependencies>
 

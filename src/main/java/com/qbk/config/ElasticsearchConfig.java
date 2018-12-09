@@ -18,7 +18,7 @@ import java.net.InetAddress;
  * @Description: Elasticsearch 配置
  */
 @Log4j2
-@Configuration
+//@Configuration
 public class ElasticsearchConfig {
 
     /**

@@ -39,7 +39,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         //重定向
-        registry.addViewController("/").setViewName("redirect:/swagger-ui.html");
+//        registry.addViewController("/").setViewName("redirect:/swagger-ui.html");
+        registry.addViewController("/").setViewName("redirect:/doc.html");
         //@Order(Ordered.HIGHEST_PRECEDENCE)代表这个过滤器在众多过滤器中级别最高，也就是过滤的时候最先执行
         //而@Order(Ordered.LOWEST_PRECEDENCE)恰恰相反，表示级别最低，最后执行过滤操作。
         registry.setOrder(Ordered.HIGHEST_PRECEDENCE);

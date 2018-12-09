@@ -1,7 +1,6 @@
 package com.qbk.controller;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+
 import com.qbk.entity.TestInfo;
 import com.qbk.service.TestService;
 import com.qbk.util.BaseResult;
@@ -11,6 +10,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,6 +25,7 @@ import java.util.List;
  */
 @Api(tags = {"测试控制器"})
 @Log4j2
+//@Controller
 @RestController
 @RequestMapping(value = "/test")
 public class TestController {
@@ -34,7 +35,7 @@ public class TestController {
 
     @ApiOperation(value = "获取测试",notes="详细描述获取测试列表")
     @GetMapping("/getTest/{name}")
-    public BaseResult<PageInfo<TestInfo>> getTest(@ApiParam(name = "name",value = "名称",required = true)@PathVariable String name,
+    public BaseResult getTest(@ApiParam(name = "name",value = "名称",required = true)@PathVariable String name,
                               @ApiParam(name = "pageNum",value = "页码")@RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
                               @ApiParam(name = "pageSize",value = "条数")@RequestParam(value = "pageSize",defaultValue = "10") Integer pageSize){
 
@@ -42,11 +43,11 @@ public class TestController {
         log.info("builder测试"+testInfo);
 
         List<TestInfo> list = testService.getTest();
-        if (pageNum != -1) {
-            PageHelper.startPage(pageNum, pageSize);
-        }
-        PageInfo<TestInfo> pageInfo = new PageInfo<>(list);
-        return BaseResultGenerator.success("成功",pageInfo);
+//        if (pageNum != -1) {
+//            PageHelper.startPage(pageNum, pageSize);
+//        }
+//        PageInfo<TestInfo> pageInfo = new PageInfo<>(list);
+        return BaseResultGenerator.success("成功",list);
     }
 
     @ApiOperation(value = "添加测试",notes="详细描述一个实体的添加")
@@ -73,6 +74,12 @@ public class TestController {
             log.error("删除失败");
             return BaseResultGenerator.error("删除失败");
         }
+    }
+
+    @PostMapping("/login")
+    public BaseResult login(String username ,String password){
+        System.out.println("登陆接口");
+        return BaseResultGenerator.success("登陆成功");
     }
 
 }

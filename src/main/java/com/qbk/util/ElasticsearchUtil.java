@@ -36,7 +36,7 @@ import java.util.UUID;
  * @Description: Elasticsearch工具类
  */
 @Log4j2
-@Component
+//@Component
 public class ElasticsearchUtil {
 
     @Autowired
