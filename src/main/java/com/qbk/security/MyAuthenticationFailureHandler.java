@@ -19,7 +19,7 @@ import java.io.IOException;
  * @Description: 失败处理器
  */
 @Log4j2
-@Component
+//@Component
 public class MyAuthenticationFailureHandler implements AuthenticationFailureHandler {
 
     @Autowired

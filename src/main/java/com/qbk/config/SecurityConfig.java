@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
  * @Date: 2018/11/28 18:37
  * @Description: Security配置
  */
-@Configuration
+//@Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter { //Security 配置适配器
 
 

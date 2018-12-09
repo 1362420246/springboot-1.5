@@ -18,7 +18,7 @@ import java.io.IOException;
  * @Description: 成功处理器
  */
 @Log4j2
-@Component
+//@Component
 public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 
     @Autowired

@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
  * @Description: 用户身份认证
  */
 @Log4j2
-@Service("userDetailsService")
+//@Service("userDetailsService")
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
