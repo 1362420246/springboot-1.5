@@ -25,7 +25,7 @@ public class JwtTokenUtil implements Serializable {
     /**
      * 密钥
      */
-    private final String secret = "aaaaaaaa";
+    private final String secret = "auth";
 
     /**
      * 从数据声明生成令牌

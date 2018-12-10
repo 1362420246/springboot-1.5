@@ -36,10 +36,11 @@ public class SwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.qbk.controller"))
                 .paths(PathSelectors.regex("^(?!auth).*$"))
-                .build().apiInfo(apiInfo());
+                .build().apiInfo(apiInfo())
 //权限配置 https://www.jianshu.com/p/6e5ee9dd5a61
-//                .securitySchemes(securitySchemes())
-//                .securityContexts(securityContexts())
+                .securitySchemes(securitySchemes())
+                .securityContexts(securityContexts())
+                ;
 
     }
     private ApiInfo apiInfo() {

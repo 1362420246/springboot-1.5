@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 其他请求需要 设置 Headers  Authorization : Bearer + token
+ * https://www.cnblogs.com/hackyo/p/8004928.html
+ * https://www.jianshu.com/p/4e25e25b62c2
  */
 @CrossOrigin
 @RestController
