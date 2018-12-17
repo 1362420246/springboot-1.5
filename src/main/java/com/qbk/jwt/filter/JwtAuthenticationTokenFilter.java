@@ -25,21 +25,21 @@ import java.io.IOException;
 @Component
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
-    private UserDetailsService userDetailsService;
-    private JwtTokenUtil jwtTokenUtil;
-
     @Autowired
-    public JwtAuthenticationTokenFilter(UserDetailsService userDetailsService, JwtTokenUtil jwtTokenUtil) {
-        this.userDetailsService = userDetailsService;
-        this.jwtTokenUtil = jwtTokenUtil;
-    }
+    private UserDetailsService userDetailsService;
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
+        //获取请求头中得 参数
         String authHeader = request.getHeader("Authorization");
+        //token前缀
         String tokenHead = "Bearer ";
         if (authHeader != null && authHeader.startsWith(tokenHead)) {
+            //截取 获得token
             String authToken = authHeader.substring(tokenHead.length());
+            //token对应得用户名
             String username = jwtTokenUtil.getUsernameFromToken(authToken);
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
@@ -50,6 +50,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                 }
             }
         }
+        //放行
         chain.doFilter(request, response);
     }
 
